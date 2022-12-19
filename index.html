@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kufam:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.2.2/lux/bootstrap.min.css"
+        integrity="sha512-c92Fgo6BOkdn6SLfXJQb1gBV26zNssZQwtkLPFoMX0B5JXd+yeOo0nx5v3rEYsjvMy97CpIRdsV4HA+AysY2Eg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Calc</title>
+</head>
+
+<body>
+    <!-- Jumbotron -->
+    <div class="text-center"><img src="./fikr.jpeg" alt="" class="justify-content-center mx-auto"
+            style="max-height: 10vh ;"></div>
+    <div class=" p-5 text-center shadow-1-strong img-fluid  mb-5 text-white" style="background-image: url('math.jpg'); background-size: cover;
+            background-position: center; height: 40vw;  width: 100vw; ">
+        <div class="row">
+
+            <div class="col-xs-12 col-sm-12 col-md-7">
+                <p class="h1 shadow-1-strong">
+                    تعلم الرياضيات <p class="h1 text-success">مع دار الفكر</p>
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="text-center h3 mb-5 rtl">يرجى وضع الدالة في المربع:</div>
+        <div class="input-functio border border-3 rounded border-success">
+            <script defer src="//unpkg.com/mathlive"></script>
+            <math-field id="formula" virtual-keyboard-mode="manual"  style="--selection-background-color-focused: ">
+            </math-field>
+        </div>
+        <br><br><br>
+        <div class="row">
+            <!-- <div class="text-xs-center"> -->
+                <div id="graph" class="col-sm-12 col-xs-12 col-md-6 col-xl-6 graph "></div>
+            <!-- </div> -->
+            <!-- <div class="text-xs-center"> -->
+                <div id="prime" class="col-sm-12 col-xs-12 col-md-6 col-xl-6 graph  "></div>
+            <!-- </div> -->
+        </div>
+        <div class="row">
+            <div id="graph-latex" class="col-xs-12 col-sm-12 col-md-6"></div>
+            <div id="prime-latex" class="col-xs-12 col-sm-12 col-md-6"></div>
+        </div>
+        <br><br><br>
+        <div class="h1 text-center rtl">الحصول على ال tangent and secant line </div>
+        <div class="form p-3 mb-4">
+            <div class="text-end"><label for="xvalue" class="form-label rtl ">قيمة الX</label></div>
+            <input type="text" id="xvalue" class="form-control rtl" placeholder="مثلا: 2">
+            <div class="form-text rtl">يرجى العلم ان كتابة الرقم يجب ان تكون باللغة الانجليزية</div>
+        </div>
+
+        <div class="d-grid gap-2 mb-5">
+            <button class="btn btn-success" id="tansub" type="button">سلم</button>
+        </div>
+        <div class="row">
+            <!-- <div class="text-xs-center"> -->
+                <div id="tangraph" class="col-sm-12 col-xs-12 col-md-6 col-xl-6 graph "></div>
+
+            <!-- </div> -->
+            <!-- <div class="text-xs-center"> -->
+                <div id="secgraph" class="col-sm-12 col-xs-12 col-md-6 col-xl-6 graph  "></div>
+
+            <!-- </div> -->
+        <div class="row d-flex justify-content-between">
+            <div id="tan-latex" class="col-sm-12 col-xs-12 col-md-6 col-xl-6  text-center" ></div>
+            <div id="sec-latex" class="col-sm-12 col-xs-12 col-md-6 col-xl-6  text-center"></div>
+        </div>
+
+        </div>
+        <div class="form p-3 mb-4">
+            <label for="xvalue" class="form-label:for">Nth derivative</label>
+            <input type="text" id="nvalue" class="form-control rtl" placeholder="مثلا: 2">
+            <div class="form-text rtl">يرجى العلم ان كتابة الرقم يجب ان تكون باللغة الانجليزية</div>
+        </div>
+        <div class="d-grid gap-2 mb-5">
+            <button class="btn btn-success" id="nthd" type="button">سلم</button>
+        </div>
+        <div id="nth-latex" class="mb-5 text-center"></div>
+    </div>
+
+    <footer class="d-flex justify-content-center align-items-center p-4 bg-success">
+        <div class="  ">
+            Made By Mohamed Babikir
+        </div>
+    </footer>
+    <!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script> -->
+    <!-- <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> -->
+    <script src="./nerdamer/all.min.js"></script>
+    <script src="https://unpkg.com/function-plot/dist/function-plot.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
